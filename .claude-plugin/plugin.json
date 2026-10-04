@@ -1,12 +1,18 @@
 {
   "name": "newaiway",
   "displayName": "newAIway",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Lead a business owner from an idea to the future state of a working company with the newAIway MCP.",
   "author": {
     "name": "newAIway",
     "url": "https://newaiway.com"
   },
   "homepage": "https://newaiway.com",
-  "keywords": ["business", "startup", "mcp", "ai-agents"]
+  "repository": "https://github.com/antbat/newAIway-skill",
+  "keywords": ["business", "startup", "mcp", "ai-agents"],
+  "icon": "./icon.svg",
+  "documentationUrl": "https://github.com/antbat/newAIway-skill#readme",
+  "supportUrl": "https://newaiway.com/support/",
+  "privacyPolicyUrl": "https://newaiway.com/privacy/",
+  "termsOfServiceUrl": "https://newaiway.com/terms/"
 }

@@ -1,12 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "newaiway",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Lead a business owner from an idea to the future state of a working company with the newAIway MCP.",
   "author": {
     "name": "newAIway",
     "url": "https://newaiway.com"
   },
   "homepage": "https://newaiway.com",
+  "repository": "https://github.com/antbat/newAIway-skill",
   "keywords": ["business", "startup", "mcp", "ai-agents"]
 }
