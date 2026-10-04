@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "newaiway": {
+      "type": "http",
+      "url": "https://mcp.newaiway.com/"
+    }
+  }
+}

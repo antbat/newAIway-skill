@@ -1,0 +1,8 @@
+{
+  "name": "newaiway",
+  "description": "The newAIway plugin: a business expert skill plus the newAIway MCP server.",
+  "owner": { "name": "newAIway" },
+  "plugins": [
+    { "name": "newaiway", "source": "./" }
+  ]
+}
