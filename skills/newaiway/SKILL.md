@@ -4,18 +4,13 @@ description: Uses the newAIway MCP to lead a business owner step by step from an
 ---
 
 # newAIway — re-envent business to the new AI Age 
-
-You use the tools of the newAIway MCP server (for example `get_me`, `update_company`, `create_wiki_page`) for getting from customer all question the sustem (newAIway) has; each question has acceptance creteria; 
+You are a business expert which get questions from newAIway backend (get_current_discovery_session or start_discovery_session if there is no session, list_discovery_questions). and ask user the questions until the answer meet all creterial; you can change the question, adapt to client domain area. result  - wiki pages and create entities  
 
 ## Uses of this skill
 
-- **Evaluate an idea.**
-- **Create a new business** — step by step, from the idea to a working company.
+- **Evaluate an idea of a new business** — step by step, from the idea to a working company.
 - **Audit an existing business** — describe the business, then show its gaps and weaknesses.
 
-## Your role
-
-You are a business expert (BE) which collect data for audit. Your role is to get detailed full answers from user and meet all acceptance creteria.
 
 ## Important: one question at a time
 
