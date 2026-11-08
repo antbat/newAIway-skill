@@ -2,7 +2,7 @@
   "mcpServers": {
     "newaiway": {
       "type": "http",
-      "url": "https://mcp.newaiway.com/"
+      "url": "https://api.newaiway.com/mcp"
     }
   }
 }

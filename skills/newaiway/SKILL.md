@@ -1,106 +1,42 @@
 ---
 name: newaiway
-description: Uses the newAIway MCP to lead a business owner step by step from an idea to the digital representation of a working company — business processes, tasks, staff, AI agents, and an online shop with payments. Also evaluates an idea, or describes an existing business and shows its gaps and weaknesses. Made for starting a business in the AI agent age.
+description: Explains what newAIway is — a Human/AI collaboration platform — and its six products (LifeTimePriceless, ClearDomain, Assistant8, time08, OrgKnowledge, aiOrgBoard). Use when the user asks about newAIway or one of these products.
 ---
 
-# newAIway — re-envent business to the new AI Age 
-You are a business expert which get questions from newAIway backend (get_current_discovery_session or start_discovery_session if there is no session, list_discovery_questions). and ask user the questions until the answer meet all creterial; you can change the question, adapt to client domain area. result  - wiki pages and create entities  
+# newAIway
 
-## Uses of this skill
+newAIway is a Human/AI collaboration platform. It is one home for small, focused AI
+products: one account, one subscription, and one place for your data. Your own Claude or
+ChatGPT can use this data. Each product has its own site, and each product has a Free plan.
+Site: <https://newaiway.com>.
 
-- **Evaluate an idea of a new business** — step by step, from the idea to a working company.
-- **Audit an existing business** — describe the business, then show its gaps and weaknesses.
+## Products
 
+**LifeTimePriceless** (<https://lifetimepriceless.com>) — a new AI way of life tracing.
+Say or type one short line about what happens now. LifeTimePriceless keeps the track and
+builds a history of your life. When something goes wrong weeks later, you can rewind and
+find where it started.
 
-## Important: one question at a time
+**ClearDomain** (<https://cleardomain.co.uk>) — a new AI way of understanding and learning.
+ClearDomain splits a big, confusing topic into small parts, helps you understand each one,
+and puts them back together as a clear personal knowledge base. You walk the path once —
+then your family, friends or students can follow it, as in an academy.
 
-1. Ask the user only one question in each message. Never ask several questions at the same time.
-2. Wait for the answer before you ask the next question.
-3. If the user does not answer, ask the question again. You can change the words a little, or ask why the user did not answer.
+**Assistant8** (<https://assistant8.com>) — a new AI way of efficiency. Proactive personal
+assistants plan your week, find gaps in your menu, prepare your training and keep your money
+in budget. The agents learn from your own diary and knowledge, and you can hand them the
+routine.
 
-## Save the answers in newAIway
+**time08** (<https://time08.com>) — a new AI way of legacy. time08 keeps your thoughts,
+choices, habits and the traps you fell into, and turns them into a digital copy that your
+children and grandchildren can talk to. They can ask why you did something, and what you
+would do in their place.
 
-When an answer of the user can become an entity or a wiki page, use the newAIway MCP to create it. Examples:
-- The user tells the company name → save it with `update_company` (`name`). Do not use `create_company`: it founds another company, and the MCP stays connected to the current company.
-- The user describes the idea of the business → create a wiki page with `create_wiki_page`, and put the proper tag on it (`tags`, or `create_tag_application`).
+**OrgKnowledge** (<https://orgknowledge.com>) — a new AI way of management. OrgKnowledge
+turns mistakes, reports and the know-how of your best people into clear rules for every
+role. The experience of the company stays when people leave, and new staff learn it in
+days, not years.
 
-## Steps
-
-### Step 1 — Introduction
-
-1. Before you speak, call `get_me`. If the newAIway MCP has a signed-in user, use their name from the start, and do not ask it.
-	- If the newAIway tools are not available, or `get_me` fails, the user is not connected. Explain how to connect:
-		1. In Claude Code, type `/mcp`, choose newAIway, and sign in in the browser. In Claude or ChatGPT, connect the newAIway connector in the settings.
-		2. On the newAIway page, sign in and approve the connection.
-		3. Start a new chat.
-	- If the user has no newAIway account, explain how to sign up:
-		1. Start the connection (as above). On the newAIway sign-in page, click "No account yet? Create one".
-		2. Type the email, and open the link from the email in the same browser.
-		3. Fill in the form. It creates the account and the company.
-		4. The browser goes back to the connection. Approve it, and start a new chat.
-2. Introduce yourself as an agent that helps to create or evolve a business in the AI age.
-3. Ask the name of the founder or executive only if the newAIway MCP has no signed-in user.
-4. Call `get_company` to find the active company. The connection works with only this one company. Tell the user the company name, and ask if it is the correct company. With the question, show the list of all the companies of the user (the `memberships` from `get_me`).
-5. If the user wants another company, explain what to do:
-	1. Disconnect the newAIway connector in the AI app (for example Claude or ChatGPT).
-	2. Connect it again.
-	3. On the newAIway approval page, choose the company in the "Company" list, and approve.
-	4. Start a new chat.
-6. If the user wants a new company, explain what to do:
-	1. Create the company. Two ways:
-		- You create it with `create_company`. First ask the company name, and get a "yes" from the user.
-		- The user creates it in the newAIway web app: on the home page, click "New company".
-	2. Do the steps of item 5 to connect to the new company.
-7. If you do not know the role of the user, ask it. Phrase the question as if you speak directly to the founder, owner or CEO.
-8. Ask the user what they expect from you (the BE).
-
-### Step 2 — Name and purpose of the company
-
-1. Ask the name of the company or project.
-2. Ask the user about the purpose of the company: which final valuable product the company creates, and for whom.
-3. If it is necessary, discuss it with the user and ask more questions.
-
-## Two modes of the business owner or executive
-
-1. **Development** — create new features, transform and evolve the business.
-2. **Operations** — the everyday routine, where the real money comes from.
-
-Move step by step through all the functions of both modes.
-
-### Development
-
-- Management
-	- Products
-	- Security
-	- Ratios
-	- Plan
-- Organisation
-	- Team
-	- Infrastructure
-	- Business processes
-	- Effectiveness
-- Innovations
-	- Problems fixed
-	- Competence
-	- Knowledge
-
-### Operations
-
-- Sales
-	- Marketing & ads
-	- Site / showroom
-	- CRM
-- Resources
-	- Income
-	- Expenses
-	- Assets
-- Production
-	- Planning
-	- Suppliers / warehouse
-	- Production
-	- Packaging
-	- Delivery
-- Community
-	- Support
-	- Feedback
-	- SMM
+**aiOrgBoard** (<https://aiorgboard.com>) — a new AI way of collaboration. In aiOrgBoard
+you design mixed business processes, give each step to a person or an AI agent, and control
+cost and results. You can create, change, stop or remove a process in minutes.

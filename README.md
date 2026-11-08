@@ -1,17 +1,16 @@
 # newAIway
 
-newAIway is a business expert for Claude and ChatGPT. It leads a founder or an
-owner step by step from an idea to the future state of a working company:
-business processes, tasks, staff, AI agents, and an online shop with payments.
-It can also evaluate a business idea, or describe an existing business and show
-its gaps and weaknesses.
+newAIway is a Human/AI collaboration platform: one home for small, focused AI
+products (LifeTimePriceless, ClearDomain, Assistant8, time08, OrgKnowledge,
+aiOrgBoard), with one account and one subscription. This plugin teaches Claude
+and ChatGPT what newAIway and each product are.
 
 ## What is inside
 
 | Part | What it does |
 |---|---|
-| `skills/newaiway/SKILL.md` | The business-expert skill. It asks one question at a time and saves each answer in newAIway. |
-| `.mcp.json` (Claude), `mcp.json` (ChatGPT) | Connects the AI client to the newAIway MCP server at `https://mcp.newaiway.com/`. |
+| `skills/newaiway/SKILL.md` | Explains newAIway and gives one paragraph about each product. |
+| `.mcp.json` (Claude), `mcp.json` (ChatGPT) | Connects the AI client to the newAIway MCP server at `https://api.newaiway.com/mcp`. |
 
 ## What it connects to, and what it sends
 
@@ -37,10 +36,10 @@ claude plugin install newaiway@newaiway
 ```
 
 **Claude (claude.ai, Desktop)** — add a custom connector with the URL
-`https://mcp.newaiway.com/`. After the plugin is listed in the Claude
+`https://api.newaiway.com/mcp`. After the plugin is listed in the Claude
 directory, you can add it from there too.
 
-**ChatGPT** — add a connector with the URL `https://mcp.newaiway.com/`.
+**ChatGPT** — add a connector with the URL `https://api.newaiway.com/mcp`.
 
 To disconnect an AI client, open newAIway → Settings → Connected assistants.
 
